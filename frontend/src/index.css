@@ -3,3 +3,185 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.movies-list,
+.credits-list {
+  display: flex;
+  gap: 40px;
+  overflow-x: scroll;
+  line-height: 20px;
+}
+
+.movie-item,
+.credit-item {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.movie-poster,
+.tv-show-poster,
+.person-poster,
+.credit-poster,
+.person-credits-poster {
+  border-radius: 8px;
+}
+
+.movie-title,
+.credit-title {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.movie-release-date,
+.credit-role {
+  margin-top: 5px;
+}
+
+.movie-details-page,
+.tv-show-details-page,
+.people-details-page {
+  padding: 20px;
+}
+
+.movie-details-header,
+.tv-show-details-header,
+.person-details {
+  display: flex;
+  padding: 20px;
+  gap: 50px;
+}
+
+.movie-details-header,
+.tv-show-details-header {
+  align-items: center;
+}
+
+.movie-poster,
+.tv-poster,
+.person-poster {
+  border-radius: 8px;
+}
+
+.movie-details-content,
+.tv-show-details-content,
+.person-details-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-details-content,
+.tv-show-details-content {
+  gap: 40px;
+}
+
+.person-details-content {
+  gap: 20px;
+}
+
+.movie-details-metadata,
+.tv-show-details-metadata {
+  display: flex;
+  gap: 10px;
+}
+
+.content-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-popularity,
+.content-save {
+  display: flex;
+  gap: 10px;
+}
+
+.content-credits {
+  display: flex;
+  align-content: space-evenly;
+}
+
+.content-creators {
+  flex: 1;
+}
+
+.person-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.movie-credits-container,
+.movie-reviews-container,
+.tv-show-credits-container,
+.tv-show-reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.view-more-credits-item {
+  align-content: center;
+  text-align: center;
+  width: 150px;
+  height: 225px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-header {
+  display: flex;
+  gap: 20px;
+}
+
+.review-header img {
+  border-radius: 8px;
+}
+
+.review-subtitle {
+  display: flex;
+  gap: 10px;
+}
+
+.person-credits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.person-credits-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.person-credits-item {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.person-credits-content {
+  flex: 1;
+}

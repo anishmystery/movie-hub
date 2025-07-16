@@ -1,21 +1,28 @@
 import axios from "axios";
+import { useState } from "react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import PersonDetails from "../components/PersonDetails";
 
 function PeoplePage() {
+  const { id } = useParams();
+  const [person, setPerson] = useState({});
   useEffect(() => {
-    async function getPeople() {
+    async function getPerson() {
       try {
-        const res = await axios.get("http://localhost:5001/api/person/p1");
-        console.log(res.data);
+        const res = await axios.get(`http://localhost:5001/api/person/${id}`);
+        setPerson(res.data);
       } catch (err) {
         console.error(err);
       }
     }
-    getPeople();
-  }, []);
+    getPerson();
+  }, [id]);
   return (
-    <div>
-      <h1>People</h1>
+    <div className="people-details-page">
+      {person && Object.keys(person).length !== 0 && (
+        <PersonDetails person={person} />
+      )}
     </div>
   );
 }
