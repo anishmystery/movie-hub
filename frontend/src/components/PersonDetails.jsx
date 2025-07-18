@@ -17,8 +17,14 @@ function PersonDetails({ person }) {
           </p>
         </div>
         <div className="person-credits-container">
-          <PersonCreditsList credits={person.credits.cast} creditsType="cast" />
-          <PersonCreditsList credits={person.credits.crew} creditsType="crew" />
+          <PersonCreditsList
+            credits={person.credits?.cast}
+            creditsType="cast"
+          />
+          <PersonCreditsList
+            credits={person.credits?.crew}
+            creditsType="crew"
+          />
         </div>
       </div>
     </div>

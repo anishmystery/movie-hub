@@ -4,6 +4,65 @@
   box-sizing: border-box;
 }
 
+.no-text-decoration {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.app-bar {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 40px;
+}
+
+.app-logo {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.app-logo p {
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 5px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.search-form {
+  flex: 1;
+}
+
+.search-bar {
+  width: 100%;
+  height: 40px;
+  font-style: italic;
+  border: none;
+  font-size: medium;
+}
+
 .movies-list,
 .credits-list {
   display: flex;
@@ -40,13 +99,17 @@
 
 .movie-details-page,
 .tv-show-details-page,
-.people-details-page {
+.people-details-page,
+.search-results-page,
+.login-page,
+.signup-page {
   padding: 20px;
 }
 
 .movie-details-header,
 .tv-show-details-header,
-.person-details {
+.person-details,
+.search-results-container {
   display: flex;
   padding: 20px;
   gap: 50px;
@@ -163,7 +226,8 @@
   gap: 10px;
 }
 
-.person-credits-container {
+.person-credits-container,
+.search-results-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -184,4 +248,131 @@
 
 .person-credits-content {
   flex: 1;
+}
+
+.search-results-container {
+  align-items: flex-start;
+}
+
+.search-results-stats-container {
+  border: 1px solid black;
+  border-radius: 8px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-results-stats-header {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.search-results-stats-list {
+  list-style-type: none;
+  margin: 10px 0px;
+}
+
+.stat-item,
+.selected-stat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.stat-item:hover,
+.selected-stat-item {
+  cursor: pointer;
+}
+
+.selected-stat-item {
+  background-color: gray;
+  font-weight: 700;
+}
+
+.stat-item:hover,
+.selected-stat-item:hover {
+  background-color: lightgray;
+}
+
+.selected-stat-item .stat-title {
+  color: white;
+}
+
+.stat-title {
+  flex: 1;
+}
+
+.stat-number,
+.selected-stat-number {
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.stat-number {
+  background-color: lightgray;
+}
+
+.selected-stat-number,
+.stat-item:hover .stat-number,
+.selected-stat-item:hover .stat-number {
+  background-color: white;
+}
+
+.search-result-item {
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.search-result-poster-wrapper {
+  min-width: 90px;
+  width: 90px;
+  height: 141px;
+}
+
+.search-result-poster {
+  border-radius: 8px 0 0 8px;
+}
+
+.search-result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.search-result-people-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-result-people-poster-wrapper {
+  min-width: 66px;
+  width: 66px;
+  height: 66px;
+}
+
+.search-result-people-poster {
+  border-radius: 8px;
+}
+
+.login-page,
+.signup-page {
+  text-align: center;
+}
+
+.login-form,
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.login-form button,
+.signup-form button {
+  padding: 5px;
 }

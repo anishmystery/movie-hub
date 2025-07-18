@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 
 import homeRouter from "./routes/home.js";
 import searchResultsRouter from "./routes/searchResults.js";
@@ -19,6 +20,9 @@ const corsOptions = {
   methods: ["GET", "POST", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
+
+// Middleware to parse any incoming request's body as JSON
+app.use(bodyParser.json());
 
 // CORS middleware
 app.use(cors(corsOptions));

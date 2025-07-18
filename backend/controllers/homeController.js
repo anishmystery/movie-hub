@@ -1,19 +1,4 @@
-const DUMMY_TRENDING_MOVIES = [
-  {
-    id: "m1",
-    title: "Movie Title 1 aslekjaswas",
-    releaseDate: "01/01/1900",
-    popularity: 80,
-    poster: "https://placehold.co/150x225",
-  },
-  {
-    id: "m2",
-    title: "Movie Title 2",
-    releaseDate: "01/01/1900",
-    popularity: 80,
-    poster: "https://placehold.co/150x225",
-  },
-];
+import { DUMMY_TRENDING_MOVIES } from "../data/dummyMovies.js";
 
 export function home(req, res, next) {
   if (DUMMY_TRENDING_MOVIES.length === 0) {
