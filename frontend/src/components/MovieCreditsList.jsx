@@ -7,7 +7,7 @@ function MovieCreditsList({ movie }) {
       {movie.cast.map((cast) => (
         <MovieCreditItem cast={cast} key={cast.id} />
       ))}
-      <ViewMoreCredits />
+      <ViewMoreCredits id={movie.id} titleType="movie" />
     </div>
   );
 }

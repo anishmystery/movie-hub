@@ -9,7 +9,12 @@ function TVShowCreditItem({ cast }) {
         height={225}
       ></img>
       <p className="credit-title">{cast.name}</p>
-      <p className="credit-role">{cast.character}</p>
+      {cast.roles?.map((role) => (
+        <div className="credit-role">
+          <p>{role.character}</p>
+          <p className="episode-count">{role.episodeCount} Episodes</p>
+        </div>
+      ))}
     </div>
   );
 }

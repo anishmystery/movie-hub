@@ -28,7 +28,7 @@ function MovieDetailsPage() {
         <>
           <MovieDetailsHeader movie={movie} year={year} />
           {movie.cast && <MovieCredits movie={movie} />}
-          {movie.reviews && <MovieReviews movie={movie} />}
+          {movie.reviews && <MovieReviews movie={movie} id={id} />}
         </>
       )}
     </div>

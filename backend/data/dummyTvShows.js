@@ -71,20 +71,42 @@ export const DUMMY_TV_SHOWS_CAST = [
       {
         id: "c1",
         name: "Cast Name 1",
-        character: "Cast Character Name 1",
         poster: "https://placehold.co/150x225",
+        roles: [
+          {
+            character: "Cast Character Name 1",
+            episodeCount: 10,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
       {
-        id: "c1",
+        id: "c2",
         name: "Cast Name 2",
-        character: "Cast Character Name 2",
         poster: "https://placehold.co/150x225",
+        roles: [
+          {
+            character: "Cast Character Name 2",
+            episodeCount: 10,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
       {
-        id: "c1",
+        id: "c3",
         name: "Cast Name 3",
-        character: "Cast Character Name 3",
         poster: "https://placehold.co/150x225",
+        roles: [
+          {
+            character: "Cast Character Name 3",
+            episodeCount: 8,
+          },
+          {
+            character: "Cast Character Name 4",
+            episodeCount: 2,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
     ],
     crew: [
@@ -92,36 +114,70 @@ export const DUMMY_TV_SHOWS_CAST = [
         id: "cr1",
         name: "Crew Name 1",
         department: "Department Name 1",
-        job: "Job Title 1",
         poster: "https://placehold.co/150x225",
-      },
-      {
-        id: "cr1",
-        name: "Crew Name 1",
-        department: "Department Name 1",
-        job: "Job Title 1",
-        poster: "https://placehold.co/150x225",
+        jobs: [
+          {
+            job: "Job Title 1",
+            episodeCount: 10,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
       {
         id: "cr2",
         name: "Crew Name 2",
         department: "Department Name 1",
-        job: "Job Title 2",
         poster: "https://placehold.co/150x225",
+        jobs: [
+          {
+            job: "Job Title 1",
+            episodeCount: 10,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
       {
         id: "cr3",
         name: "Crew Name 3",
-        department: "Department Name 2",
-        job: "Job Title 3",
+        department: "Department Name 1",
         poster: "https://placehold.co/150x225",
+        jobs: [
+          {
+            job: "Job Title 2",
+            episodeCount: 10,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
       {
         id: "cr4",
-        name: "Crew Name 1",
-        department: "Department Name 1",
-        job: "Job Title 1",
+        name: "Crew Name 4",
+        department: "Department Name 2",
         poster: "https://placehold.co/150x225",
+        jobs: [
+          {
+            job: "Job Title 3",
+            episodeCount: 10,
+          },
+        ],
+        totalEpisodeCount: 10,
+      },
+      {
+        id: "cr5",
+        name: "Crew Name 5",
+        department: "Department Name 1",
+        poster: "https://placehold.co/150x225",
+        jobs: [
+          {
+            job: "Job Title 1",
+            episodeCount: 1,
+          },
+          {
+            job: "Job Title 2",
+            episodeCount: 9,
+          },
+        ],
+        totalEpisodeCount: 10,
       },
     ],
   },

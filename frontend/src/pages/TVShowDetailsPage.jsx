@@ -28,7 +28,7 @@ function TVShowDetailsPage() {
         <>
           <TVShowDetailsHeader tvShow={tvShow} year={year} />
           {tvShow.cast && <TVShowCredits tvShow={tvShow} />}
-          {tvShow.reviews && <TVShowReviews tvShow={tvShow} />}
+          {tvShow.reviews && <TVShowReviews tvShow={tvShow} id={id} />}
         </>
       )}
     </div>

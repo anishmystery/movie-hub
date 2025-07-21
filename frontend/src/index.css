@@ -78,11 +78,17 @@
   width: 150px;
 }
 
+.credit-item:hover {
+  cursor: pointer;
+}
+
 .movie-poster,
 .tv-show-poster,
 .person-poster,
 .credit-poster,
-.person-credits-poster {
+.person-credits-poster,
+.search-result-people-poster,
+.full-credits-header-poster {
   border-radius: 8px;
 }
 
@@ -118,12 +124,6 @@
 .movie-details-header,
 .tv-show-details-header {
   align-items: center;
-}
-
-.movie-poster,
-.tv-poster,
-.person-poster {
-  border-radius: 8px;
 }
 
 .movie-details-content,
@@ -200,16 +200,31 @@
   font-weight: 700;
 }
 
+.view-more-credits-content {
+  font-weight: 700;
+}
+
+.view-more-credits-content:hover {
+  color: gray;
+}
+
+.episode-count {
+  color: gray;
+}
+
 .reviews-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
 .review-item {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 .review-header {
@@ -224,6 +239,14 @@
 .review-subtitle {
   display: flex;
   gap: 10px;
+}
+
+.read-all-reviews {
+  margin-top: 10px;
+}
+
+.read-all-reviews h3:hover {
+  color: gray;
 }
 
 .person-credits-container,
@@ -325,7 +348,8 @@
   align-items: center;
 }
 
-.search-result-poster-wrapper {
+.search-result-poster-wrapper,
+.full-credits-header-poster-wrapper {
   min-width: 90px;
   width: 90px;
   height: 141px;
@@ -354,10 +378,6 @@
   height: 66px;
 }
 
-.search-result-people-poster {
-  border-radius: 8px;
-}
-
 .login-page,
 .signup-page {
   text-align: center;
@@ -375,4 +395,83 @@
 .login-form button,
 .signup-form button {
   padding: 5px;
+}
+
+.full-credits-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 20px;
+  border-bottom: 1px solid black;
+}
+
+.full-credits-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.back:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.full-credits-container {
+  display: flex;
+  padding: 40px;
+  justify-content: space-evenly;
+}
+
+.full-cast-wrapper,
+.full-crew-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cast-list,
+.crew-group,
+.crew-members-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crew-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cast-item,
+.crew-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cast-item-poster,
+.crew-item-poster {
+  border-radius: 8px;
+}
+
+.cast-roles,
+.crew-roles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap; /* Prevents wrapping */
+  width: auto;
+  overflow-x: auto; /* Adds horizontal scroll if needed */
+}
+
+.reviews-container {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.write-review {
+  min-width: 200px;
+  width: 200px;
 }
