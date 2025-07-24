@@ -14,7 +14,6 @@ function TVShowDetailsPage() {
     async function getTVShowDetails() {
       try {
         const res = await axios.get(`http://localhost:5001/api/tv/${id}`);
-        console.log(res.data);
         setTVShow(res.data);
       } catch (err) {
         console.error(err);

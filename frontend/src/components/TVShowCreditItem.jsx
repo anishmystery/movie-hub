@@ -9,8 +9,8 @@ function TVShowCreditItem({ cast }) {
         height={225}
       ></img>
       <p className="credit-title">{cast.name}</p>
-      {cast.roles?.map((role) => (
-        <div className="credit-role">
+      {cast.roles?.map((role, idx) => (
+        <div key={idx} className="credit-role">
           <p>{role.character}</p>
           <p className="episode-count">{role.episodeCount} Episodes</p>
         </div>

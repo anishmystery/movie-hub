@@ -15,6 +15,7 @@
   gap: 40px;
   padding: 20px;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .nav-wrapper {
@@ -26,8 +27,9 @@
 
 .app-logo {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 2px;
+  font-size: x-large;
 }
 
 .app-logo p {
@@ -38,17 +40,47 @@
   list-style-type: none;
   display: flex;
   gap: 40px;
-  align-items: center;
-  font-weight: 700;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /* min-width: 140px; */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.dropdown-list li {
+  padding: 10px 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-list {
+  display: block;
 }
 
 .search-container {
   display: flex;
   gap: 10px;
   align-items: center;
-  padding: 5px 20px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  padding: 10px 20px;
 }
 
 .search-form {
@@ -63,6 +95,72 @@
   font-size: medium;
 }
 
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.movie-details-page,
+.tv-show-details-page,
+.people-details-page,
+.search-results-page,
+.login-page,
+.signup-page,
+.top-rated-page,
+.popular-page {
+  padding: 20px;
+}
+
+.home-page-header-content-wrapper {
+  height: 250px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page-content {
+  padding: 0 20px;
+}
+
+.top-rated-container,
+.popular-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.top-rated-header,
+.popular-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.selector-list {
+  display: flex;
+  /* gap: 10px; */
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.selector-item {
+  padding: 0 20px;
+  border-radius: 8px;
+  font-weight: normal;
+}
+
+.selector-item:hover {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: black;
+  color: white;
+}
+
 .movies-list,
 .credits-list {
   display: flex;
@@ -71,7 +169,7 @@
   line-height: 20px;
 }
 
-.movie-item,
+.title-item,
 .credit-item {
   display: flex;
   flex-direction: column;
@@ -80,6 +178,61 @@
 
 .credit-item:hover {
   cursor: pointer;
+}
+
+.top-rated-content-wrapper,
+.popular-content-wrapper {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.filter-panel-header,
+.filter-by-genres,
+.filter-by-release-date,
+.filter-by-ratings {
+  padding: 10px;
+}
+
+.filter-panel-header,
+.filter-by-genres,
+.filter-by-release-date {
+  border-bottom: 1px solid black;
+}
+
+.top-rated-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.title-poster-wrapper {
+  width: 100%;
+  height: 225px;
+}
+
+.title-poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.title-content {
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .movie-poster,
@@ -101,15 +254,6 @@
 .movie-release-date,
 .credit-role {
   margin-top: 5px;
-}
-
-.movie-details-page,
-.tv-show-details-page,
-.people-details-page,
-.search-results-page,
-.login-page,
-.signup-page {
-  padding: 20px;
 }
 
 .movie-details-header,

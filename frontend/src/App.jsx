@@ -9,12 +9,29 @@ import SignupPage from "./pages/SignupPage";
 import FullCastCrewPage from "./pages/FullCreditsPage";
 import FullCreditsPage from "./pages/FullCreditsPage";
 import ReviewsPage from "./pages/ReviewsPage";
+import TopRatedMoviesPage from "./pages/TopRatedMoviesPage";
+import PopularMoviesPage from "./pages/PopularMoviesPage";
+import TopRatedTVShowsPage from "./pages/TopRatedTVShowsPage";
+import PopularTVShowsPage from "./pages/PopularTVShowsPage";
+import PopularPeoplePage from "./pages/PopularPeoplePage";
 
 function App() {
   return (
     <Routes>
+      {/* Home Route */}
       <Route path="/" element={<HomePage />}></Route>
+
+      {/* App Bar Navigation Routes */}
+      <Route path="/movies/top-rated" element={<TopRatedMoviesPage />}></Route>
+      <Route path="/movies/popular" element={<PopularMoviesPage />}></Route>
+      <Route path="/tv/top-rated" element={<TopRatedTVShowsPage />}></Route>
+      <Route path="/tv/popular" element={<PopularTVShowsPage />}></Route>
+      <Route path="/people/popular" element={<PopularPeoplePage />}></Route>
+
+      {/* Search Route */}
       <Route path="/search" element={<SearchResultsPage />}></Route>
+
+      {/* Movie Routes */}
       <Route path="/movie/:id" element={<MovieDetailsPage />}></Route>
       <Route
         path="/movie/:id/full-credits"
@@ -24,6 +41,8 @@ function App() {
         path="/movie/:id/reviews"
         element={<ReviewsPage titleType="movie" />}
       ></Route>
+
+      {/* TV Routes */}
       <Route path="/tv/:id" element={<TVShowDetailsPage />}></Route>
       <Route
         path="/tv/:id/full-credits"
@@ -33,10 +52,15 @@ function App() {
         path="/tv/:id/reviews"
         element={<ReviewsPage titleType="tv" />}
       ></Route>
+
+      {/* Person Route */}
       <Route path="/person/:id" element={<PeoplePage />}></Route>
+
+      {/* Authentication Routes */}
       <Route path="/login" element={<LoginPage />}></Route>
       <Route path="/signup" element={<SignupPage />}></Route>
 
+      {/* 404 Route */}
       <Route
         path="*"
         element={
