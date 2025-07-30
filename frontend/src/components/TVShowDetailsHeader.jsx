@@ -1,4 +1,36 @@
+import axios from "axios";
+import { useState } from "react";
+
 function TVShowDetailsHeader({ tvShow, year }) {
+  const [isFavourited, setIsFavourited] = useState(false);
+  const [isAddedToWatchlist, setIsAddedToWatchlist] = useState(false);
+  async function handleAddToWatchlist() {
+    try {
+      const res = await axios.post("http://localhost:5001/api/user/watchlist", {
+        email: "test@test.com",
+        titleId: tvShow.id,
+        titleType: "tv",
+      });
+      console.log(res.data);
+      setIsAddedToWatchlist(true);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async function handleAddToFavourites() {
+    try {
+      const res = await axios.post("http://localhost:5001/api/user/favourite", {
+        email: "test@test.com",
+        titleId: tvShow.id,
+        titleType: "tv",
+      });
+      console.log(res.data);
+      setIsFavourited(true);
+    } catch (err) {
+      console.error(err);
+    }
+  }
   return (
     <div className="tv-show-details-header">
       <img
@@ -29,8 +61,12 @@ function TVShowDetailsHeader({ tvShow, year }) {
             <h2>Add your rating</h2>
           </div>
           <div className="content-save">
-            <h3>Favourite</h3>
-            <h3>Watchlist</h3>
+            {!isFavourited ? (
+              <button onClick={handleAddToFavourites}>Favourite</button>
+            ) : null}
+            {!isAddedToWatchlist ? (
+              <button onClick={handleAddToWatchlist}>Watchlist</button>
+            ) : null}
             <h3>Play Trailer</h3>
           </div>
         </div>

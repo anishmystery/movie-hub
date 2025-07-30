@@ -20,3 +20,23 @@ export function getTVShowById(req, res, next) {
     reviews: reviews?.reviews || [],
   });
 }
+
+export function addTVShowReview(req, res, next) {
+  const { id, content, author, authorDetails } = req.body;
+  const tv = DUMMY_TV_SHOWS.find((t) => t.id === id);
+
+  if (!tv) return res.json({ message: "TV Show not found" });
+
+  const newReview = {
+    id: `r${DUMMY_TV_SHOWS_REVIEWS.reviews?.length + 1}`,
+    content,
+    createdAt: new Date().toISOString(),
+    author,
+    authorDetails,
+  };
+  console.log(DUMMY_TV_SHOWS_REVIEWS.reviews);
+
+  tv.reviews = tv.reviews || [];
+  tv.reviews.push(newReview);
+  return res.json({ review: newReview });
+}

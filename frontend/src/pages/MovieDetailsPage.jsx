@@ -22,6 +22,7 @@ function MovieDetailsPage() {
     }
     getMovieDetails();
   }, [id]);
+
   return (
     <div className="movie-details-page">
       {movie && Object.keys(movie).length !== 0 && (

@@ -214,3 +214,387 @@ export const DUMMY_TV_SHOWS_REVIEWS = [
     ],
   },
 ];
+
+export const DUMMY_TOP_RATED_TV_SHOWS = [
+  {
+    id: "t1",
+    name: "TV Show Title 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Creator",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 5,
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t2",
+    name: "TV Show Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator 1",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 3,
+    popularity: 85,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t1",
+    name: "TV Show Title 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Creator",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 5,
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t2",
+    name: "TV Show Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator 1",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 3,
+    popularity: 85,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t1",
+    name: "TV Show Title 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Creator",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 5,
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t2",
+    name: "TV Show Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator 1",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 3,
+    popularity: 85,
+    poster: "https://placehold.co/300x450",
+  },
+];
+
+export const DUMMY_POPULAR_TV_SHOWS = [
+  {
+    id: "t1",
+    name: "TV Show Title 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Creator",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 5,
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t2",
+    name: "TV Show Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator 1",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 3,
+    popularity: 85,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t1",
+    name: "TV Show Title 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Creator",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 5,
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t2",
+    name: "TV Show Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator 1",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 3,
+    popularity: 85,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t1",
+    name: "TV Show Title 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Creator",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 5,
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "t2",
+    name: "TV Show Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    firstAirDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator 1",
+        role: "Creator",
+      },
+    ],
+    numberOfSeasons: 3,
+    popularity: 85,
+    poster: "https://placehold.co/300x450",
+  },
+];

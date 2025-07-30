@@ -99,3 +99,84 @@ export const DUMMY_CREDITS = [
     ],
   },
 ];
+
+export const DUMMY_POPULAR_PEOPLE = [
+  {
+    id: "p1",
+    name: "Person Name 1",
+    biography:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam quo, ex iste atque aliquam, eius doloribus nobis dignissimos sunt repudiandae obcaecati! Itaque quo nobis deserunt recusandae reprehenderit vero placeat?",
+    birthday: "01/01/1900",
+    deathday: null,
+    gender: "Male",
+    knownForDepartment: "Acting",
+    profilePath: "https://placehold.co/300x450",
+    placeOfBirth: "Some place, Some state, Some country",
+    alsoKnownAs: ["Name 1", "Name 2", "Name 3"],
+  },
+  {
+    id: "p2",
+    name: "Person Name 2",
+    biography:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam quo, ex iste atque aliquam, eius doloribus nobis dignissimos sunt repudiandae obcaecati! Itaque quo nobis deserunt recusandae reprehenderit vero placeat?",
+    birthday: "01/01/1900",
+    deathday: null,
+    gender: "Female",
+    knownForDepartment: "Acting",
+    profilePath: "https://placehold.co/300x450",
+    placeOfBirth: "Some place, Some state, Some country",
+    alsoKnownAs: ["Name 1"],
+  },
+  {
+    id: "p1",
+    name: "Person Name 1",
+    biography:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam quo, ex iste atque aliquam, eius doloribus nobis dignissimos sunt repudiandae obcaecati! Itaque quo nobis deserunt recusandae reprehenderit vero placeat?",
+    birthday: "01/01/1900",
+    deathday: null,
+    gender: "Male",
+    knownForDepartment: "Acting",
+    profilePath: "https://placehold.co/300x450",
+    placeOfBirth: "Some place, Some state, Some country",
+    alsoKnownAs: ["Name 1", "Name 2", "Name 3"],
+  },
+  {
+    id: "p2",
+    name: "Person Name 2",
+    biography:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam quo, ex iste atque aliquam, eius doloribus nobis dignissimos sunt repudiandae obcaecati! Itaque quo nobis deserunt recusandae reprehenderit vero placeat?",
+    birthday: "01/01/1900",
+    deathday: null,
+    gender: "Female",
+    knownForDepartment: "Acting",
+    profilePath: "https://placehold.co/300x450",
+    placeOfBirth: "Some place, Some state, Some country",
+    alsoKnownAs: ["Name 1"],
+  },
+  {
+    id: "p1",
+    name: "Person Name 1",
+    biography:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam quo, ex iste atque aliquam, eius doloribus nobis dignissimos sunt repudiandae obcaecati! Itaque quo nobis deserunt recusandae reprehenderit vero placeat?",
+    birthday: "01/01/1900",
+    deathday: null,
+    gender: "Male",
+    knownForDepartment: "Acting",
+    profilePath: "https://placehold.co/300x450",
+    placeOfBirth: "Some place, Some state, Some country",
+    alsoKnownAs: ["Name 1", "Name 2", "Name 3"],
+  },
+  {
+    id: "p2",
+    name: "Person Name 2",
+    biography:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quam quo, ex iste atque aliquam, eius doloribus nobis dignissimos sunt repudiandae obcaecati! Itaque quo nobis deserunt recusandae reprehenderit vero placeat?",
+    birthday: "01/01/1900",
+    deathday: null,
+    gender: "Female",
+    knownForDepartment: "Acting",
+    profilePath: "https://placehold.co/300x450",
+    placeOfBirth: "Some place, Some state, Some country",
+    alsoKnownAs: ["Name 1"],
+  },
+];

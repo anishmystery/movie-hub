@@ -9,6 +9,7 @@ import movieRouter from "./routes/movie.js";
 import tvShowRouter from "./routes/tvShow.js";
 import peopleRouter from "./routes/people.js";
 import authRouter from "./routes/auth.js";
+import userRouter from "./routes/user.js";
 
 dotenv.config();
 
@@ -34,6 +35,7 @@ app.use("/api/movie", movieRouter);
 app.use("/api/tv", tvShowRouter);
 app.use("/api/person", peopleRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 
 // Sample route
 // app.get("/", (req, res, next) => {

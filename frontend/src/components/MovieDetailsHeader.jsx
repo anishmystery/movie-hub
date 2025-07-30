@@ -1,4 +1,36 @@
+import axios from "axios";
+import { useState } from "react";
+
 function MovieDetailsHeader({ movie, year }) {
+  const [isFavourited, setIsFavourited] = useState(false);
+  const [isAddedToWatchlist, setIsAddedToWatchlist] = useState(false);
+  async function handleAddToWatchlist() {
+    try {
+      const res = await axios.post("http://localhost:5001/api/user/watchlist", {
+        email: "test@test.com",
+        titleId: movie.id,
+        titleType: "movie",
+      });
+      console.log(res.data);
+      setIsAddedToWatchlist(true);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async function handleAddToFavourites() {
+    try {
+      const res = await axios.post("http://localhost:5001/api/user/favourite", {
+        email: "test@test.com",
+        titleId: movie.id,
+        titleType: "movie",
+      });
+      console.log(res.data);
+      setIsFavourited(true);
+    } catch (err) {
+      console.error(err);
+    }
+  }
   return (
     <div className="movie-details-header">
       <img
@@ -29,9 +61,13 @@ function MovieDetailsHeader({ movie, year }) {
             <h2>Add your rating</h2>
           </div>
           <div className="content-save">
-            <h3>Favourite</h3>
-            <h3>Watchlist</h3>
-            <h3>Play Trailer</h3>
+            {!isFavourited ? (
+              <button onClick={handleAddToFavourites}>Favourite</button>
+            ) : null}
+            {!isAddedToWatchlist ? (
+              <button onClick={handleAddToWatchlist}>Watchlist</button>
+            ) : null}
+            <button>Play Trailer</button>
           </div>
         </div>
         <div className="content-overview">

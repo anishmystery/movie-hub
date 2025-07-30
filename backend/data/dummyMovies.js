@@ -164,19 +164,416 @@ export const DUMMY_MOVIES_REVIEWS = [
   },
 ];
 
-export const DUMMY_TRENDING_MOVIES = [
+export const DUMMY_POPULAR_MOVIES = [
   {
     id: "m1",
-    title: "Movie Title 1 aslekjaswas",
+    title: "Movie Name 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
     releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Writer",
+      },
+      {
+        id: "c3",
+        name: "Creator Name 3",
+        role: "Writer",
+      },
+    ],
+    runtime: "2h 3m",
     popularity: 80,
-    poster: "https://placehold.co/150x225",
+    poster: "https://placehold.co/300x450",
   },
   {
     id: "m2",
     title: "Movie Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
     releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 70,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m1",
+    title: "Movie Name 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Writer",
+      },
+      {
+        id: "c3",
+        name: "Creator Name 3",
+        role: "Writer",
+      },
+    ],
+    runtime: "2h 3m",
     popularity: 80,
-    poster: "https://placehold.co/150x225",
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m2",
+    title: "Movie Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 70,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m1",
+    title: "Movie Name 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Writer",
+      },
+      {
+        id: "c3",
+        name: "Creator Name 3",
+        role: "Writer",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m2",
+    title: "Movie Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 70,
+    poster: "https://placehold.co/300x450",
+  },
+];
+
+export const DUMMY_TOP_RATED_MOVIES = [
+  {
+    id: "m1",
+    title: "Movie Name 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Writer",
+      },
+      {
+        id: "c3",
+        name: "Creator Name 3",
+        role: "Writer",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m2",
+    title: "Movie Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 70,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m1",
+    title: "Movie Name 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Writer",
+      },
+      {
+        id: "c3",
+        name: "Creator Name 3",
+        role: "Writer",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m2",
+    title: "Movie Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 70,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m1",
+    title: "Movie Name 1",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+      {
+        id: "g3",
+        name: "Genre 3",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+      {
+        id: "c2",
+        name: "Creator Name 2",
+        role: "Writer",
+      },
+      {
+        id: "c3",
+        name: "Creator Name 3",
+        role: "Writer",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 80,
+    poster: "https://placehold.co/300x450",
+  },
+  {
+    id: "m2",
+    title: "Movie Title 2",
+    overview:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae error ipsam suscipit eius fugiat veritatis iure aperiam temporibus aspernatur sequi. Molestiae ipsa error optio tenetur dignissimos consequatur nisi itaque minima!",
+    releaseDate: "01/01/1900",
+    genres: [
+      {
+        id: "g1",
+        name: "Genre 1",
+      },
+      {
+        id: "g2",
+        name: "Genre 2",
+      },
+    ],
+    createdBy: [
+      {
+        id: "c1",
+        name: "Creator Name 1",
+        role: "Director",
+      },
+    ],
+    runtime: "2h 3m",
+    popularity: 70,
+    poster: "https://placehold.co/300x450",
   },
 ];
