@@ -24,18 +24,19 @@ export function getMovieById(req, res, next) {
 export function addMovieReview(req, res, next) {
   const { id, content, author, authorDetails } = req.body;
   const movie = DUMMY_MOVIES.find((m) => m.id === id);
+  const reviews = DUMMY_MOVIES_REVIEWS.find((m) => m.id === id);
 
   if (!movie) return res.json({ message: "Movie not found" });
 
+  // movie.reviews = reviews || [];
+
   const newReview = {
-    id: `r${DUMMY_MOVIES_REVIEWS.reviews?.length + 1}`,
+    id: `r${reviews.reviews.length + 1}`,
     content,
     createdAt: new Date().toISOString(),
     author,
     authorDetails,
   };
-
-  movie.reviews = movie.reviews || [];
-  movie.reviews.push(newReview);
+  reviews.reviews.push(newReview);
   return res.json({ review: newReview });
 }

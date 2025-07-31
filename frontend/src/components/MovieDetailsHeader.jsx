@@ -62,10 +62,14 @@ function MovieDetailsHeader({ movie, year }) {
           </div>
           <div className="content-save">
             {!isFavourited ? (
-              <button onClick={handleAddToFavourites}>Favourite</button>
+              <button onClick={handleAddToFavourites} className="favourite-btn">
+                ❤️
+              </button>
             ) : null}
             {!isAddedToWatchlist ? (
-              <button onClick={handleAddToWatchlist}>Watchlist</button>
+              <button onClick={handleAddToWatchlist} className="watchlist-btn">
+                ➕
+              </button>
             ) : null}
             <button>Play Trailer</button>
           </div>

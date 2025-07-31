@@ -47,7 +47,12 @@
   position: relative;
 }
 
-.dropdown-list {
+.dropdown:hover {
+  cursor: pointer;
+}
+
+.dropdown-list,
+.dropdown-list-profile {
   display: none;
   position: absolute;
   top: 100%;
@@ -62,17 +67,25 @@
   list-style-type: none;
 }
 
-.dropdown-list li {
+.dropdown-list-profile {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-list li,
+.dropdown-list-profile li {
   padding: 10px 20px;
   white-space: nowrap;
   cursor: pointer;
 }
 
-.dropdown-list li:hover {
+.dropdown-list li:hover,
+.dropdown-list-profile li:hover {
   background: #f0f0f0;
 }
 
-.dropdown:hover .dropdown-list {
+.dropdown:hover .dropdown-list,
+.dropdown:hover .dropdown-list-profile {
   display: block;
 }
 
@@ -394,7 +407,8 @@
 }
 
 .person-credits-container,
-.search-results-list {
+.search-results-list,
+.watchlist {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -485,7 +499,8 @@
   background-color: white;
 }
 
-.search-result-item {
+.search-result-item,
+.watchlist-item {
   border: 1px solid black;
   border-radius: 8px;
   display: flex;
@@ -493,17 +508,20 @@
 }
 
 .search-result-poster-wrapper,
-.full-credits-header-poster-wrapper {
+.full-credits-header-poster-wrapper,
+.watchlist-poster-wrapper {
   min-width: 90px;
   width: 90px;
   height: 141px;
 }
 
-.search-result-poster {
+.search-result-poster,
+.watchlist-poster {
   border-radius: 8px 0 0 8px;
 }
 
-.search-result-content {
+.search-result-content,
+.watchlist-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -618,4 +636,58 @@
 .write-review {
   min-width: 200px;
   width: 200px;
+}
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 20px;
+  border-bottom: 1px solid black;
+}
+
+.user-profile-header-poster-wrapper {
+  min-width: 120px;
+  width: 120px;
+  height: 120px;
+}
+
+.user-profile-header-poster {
+  border-radius: 50%;
+}
+
+.user-profile-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-profile-header-rating {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-profile-content {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.watchlist-content {
+  flex: 1;
+}
+
+.watchlist-content-header {
+  display: flex;
+  gap: 10px;
+}
+
+.watchlist-title {
+  flex: 1;
+}
+
+.remove:hover {
+  cursor: pointer;
 }

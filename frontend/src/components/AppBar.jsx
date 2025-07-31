@@ -44,7 +44,14 @@ function AppBar() {
         </ul>
       </div>
       <ul className="nav-links">
-        <li>Profile</li>
+        <li className="dropdown">
+          Profile
+          <ul className="dropdown-list-profile">
+            <Link to={"/user/u1"} className="no-text-decoration">
+              <li>View Profile</li>
+            </Link>
+          </ul>
+        </li>
       </ul>
     </div>
   );

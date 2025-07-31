@@ -6,7 +6,6 @@ import PeoplePage from "./pages/PeoplePage";
 import LoginPage from "./pages/LoginPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import SignupPage from "./pages/SignupPage";
-import FullCastCrewPage from "./pages/FullCreditsPage";
 import FullCreditsPage from "./pages/FullCreditsPage";
 import ReviewsPage from "./pages/ReviewsPage";
 import TopRatedMoviesPage from "./pages/TopRatedMoviesPage";
@@ -14,6 +13,7 @@ import PopularMoviesPage from "./pages/PopularMoviesPage";
 import TopRatedTVShowsPage from "./pages/TopRatedTVShowsPage";
 import PopularTVShowsPage from "./pages/PopularTVShowsPage";
 import PopularPeoplePage from "./pages/PopularPeoplePage";
+import UserProfilePage from "./pages/UserProfilePage";
 
 function App() {
   return (
@@ -59,6 +59,9 @@ function App() {
       {/* Authentication Routes */}
       <Route path="/login" element={<LoginPage />}></Route>
       <Route path="/signup" element={<SignupPage />}></Route>
+
+      {/* User Route */}
+      <Route path="/user/:id" element={<UserProfilePage />}></Route>
 
       {/* 404 Route */}
       <Route

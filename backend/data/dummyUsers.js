@@ -4,7 +4,10 @@ export const DUMMY_USERS = [
     email: "test@test.com",
     password: "test123",
     name: "User Name 1",
-    watchlist: [],
+    watchlist: [
+      { titleId: "m1", titleType: "movie" },
+      { titleId: "t1", titleType: "tv" },
+    ],
     favourites: [],
   },
   {
