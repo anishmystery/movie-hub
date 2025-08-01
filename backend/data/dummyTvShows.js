@@ -194,7 +194,7 @@ export const DUMMY_TV_SHOWS_REVIEWS = [
         createdAt: "MM/DD/YYYY",
         author: "Author Name 1",
         authorDetails: {
-          username: "username-1",
+          userId: "u1",
           avatarPath: "https://placehold.co/45x45",
           rating: 80,
         },
@@ -206,7 +206,7 @@ export const DUMMY_TV_SHOWS_REVIEWS = [
         createdAt: "MM/DD/YYYY",
         author: "Author Name 2",
         authorDetails: {
-          username: "username-2",
+          userId: "u2",
           avatarPath: "https://placehold.co/45x45",
           rating: 60,
         },

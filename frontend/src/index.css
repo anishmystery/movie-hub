@@ -387,15 +387,28 @@
 .review-header {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .review-header img {
   border-radius: 8px;
 }
 
+.review-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .review-subtitle {
   display: flex;
   gap: 10px;
+}
+
+.review-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .read-all-reviews {
@@ -672,7 +685,7 @@
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .watchlist-content {

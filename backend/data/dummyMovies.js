@@ -162,6 +162,23 @@ export const DUMMY_MOVIES_REVIEWS = [
       },
     ],
   },
+  {
+    id: "m2",
+    reviews: [
+      {
+        id: "r1",
+        content:
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio tenetur, consequuntur ullam cupiditate, libero, eveniet illum totam molestiae vero voluptatibus voluptatem. Vitae nulla quasi eos, libero quod vero debitis sit?",
+        createdAt: "MM/DD/YYYY",
+        author: "Author Name 1",
+        authorDetails: {
+          userId: "u1",
+          avatarPath: "https://placehold.co/45x45",
+          rating: 80,
+        },
+      },
+    ],
+  },
 ];
 
 export const DUMMY_POPULAR_MOVIES = [

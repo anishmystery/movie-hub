@@ -9,6 +9,7 @@ function UserProfilePage() {
   const { id } = useParams();
   const [user, setUser] = useState({});
   const [watchlistDetails, setWatchlistDetails] = useState([]);
+  const [userReviews, setUserReviews] = useState([]);
 
   useEffect(() => {
     async function getUser() {
@@ -46,6 +47,20 @@ function UserProfilePage() {
     getWatchlistDetails();
   }, [id, user.watchlist]);
 
+  useEffect(() => {
+    async function getUserReviews() {
+      try {
+        const res = await axios.get(
+          `http://localhost:5001/api/user/${id}/reviews`
+        );
+        setUserReviews(res.data.userReviews);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    getUserReviews();
+  }, [id]);
+
   async function handleRemoveFromWatchlist(id) {
     try {
       await axios.delete(`http://localhost:5001/api/user/watchlist/${id}`);
@@ -62,11 +77,39 @@ function UserProfilePage() {
     <div className="user-profile-page">
       <UserProfileHeader user={user} />
       <div className="user-profile-content">
-        <h2>My Watchlist</h2>
-        <Watchlist
-          watchlist={watchlistDetails}
-          onRemoveFromWatchlist={handleRemoveFromWatchlist}
-        />
+        {watchlistDetails && (
+          <>
+            <h2>My Watchlist</h2>
+            <Watchlist
+              watchlist={watchlistDetails}
+              onRemoveFromWatchlist={handleRemoveFromWatchlist}
+            />
+          </>
+        )}
+        <h2>User Reviews</h2>
+        <div className="reviews-list">
+          {userReviews.map((review, idx) => (
+            <div className="review-item" key={idx}>
+              <div className="review-header">
+                <img src={review.poster} width={45} height={65} />
+                <div className="review-metadata">
+                  <h2>{review.title}</h2>
+                  <div className="review-subtitle">
+                    <p>{review.authorDetails.rating}%</p>
+                    <p>
+                      Written by <strong>{review.author}</strong> on{" "}
+                      <em>{review.createdAt}</em>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="review-body">
+                <h2>A review by {review.author}</h2>
+                <p>{review.content}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,8 @@
+import { DUMMY_MOVIES, DUMMY_MOVIES_REVIEWS } from "../data/dummyMovies.js";
+import {
+  DUMMY_TV_SHOWS,
+  DUMMY_TV_SHOWS_REVIEWS,
+} from "../data/dummyTvShows.js";
 import { DUMMY_USERS } from "../data/dummyUsers.js";
 
 export function getUserById(req, res, next) {
@@ -52,4 +57,41 @@ export function removeFromWatchlist(req, res, next) {
     (w) => w.titleId !== id
   );
   return next();
+}
+
+export function getUserReviews(req, res, next) {
+  const { id } = req.params;
+  const userReviews = [];
+
+  DUMMY_MOVIES_REVIEWS.forEach((item) => {
+    item.reviews.forEach((review) => {
+      if (review.authorDetails.userId === id) {
+        const movie = DUMMY_MOVIES.find((movie) => movie.id === item.id);
+        userReviews.push({
+          ...review,
+          titleId: item.id,
+          titleType: "movie",
+          title: movie.title,
+          poster: movie.poster,
+        });
+      }
+    });
+  });
+
+  DUMMY_TV_SHOWS_REVIEWS.forEach((item) => {
+    item.reviews.forEach((review) => {
+      if (review.authorDetails.userId === id) {
+        const tvShow = DUMMY_TV_SHOWS.find((tv) => tv.id === item.id);
+        userReviews.push({
+          ...review,
+          titleId: item.id,
+          titleType: "tv",
+          title: tvShow.name,
+          poster: tvShow.poster,
+        });
+      }
+    });
+  });
+
+  return res.json({ userReviews });
 }
