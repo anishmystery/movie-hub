@@ -4,12 +4,15 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import ReviewsList from "../components/ReviewsList";
+import AddReviewModal from "../components/AddReviewModal";
 
 function ReviewsPage({ titleType }) {
   const { id } = useParams();
   const [title, setTitle] = useState({});
   const [reviews, setReviews] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     async function getTitleDetails() {
       try {
@@ -29,23 +32,27 @@ function ReviewsPage({ titleType }) {
     navigate(-1);
   }
 
-  async function handleAddReview() {
+  function handleAddReview(review) {
+    setReviews((reviews) => [...reviews, review]);
+  }
+
+  async function handleRemoveReview(reviewId, userId) {
     try {
-      const res = await axios.post(
+      await axios.delete(
         `http://localhost:5001/api/${titleType}/${id}/reviews`,
         {
-          id: id,
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis numquam ab omnis hic, quia aperiam blanditiis quasi quisquam natus animi. Illum molestiae fugit deleniti nesciunt quaerat perferendis, hic blanditiis quo!",
-          author: "User Name 1",
-          authorDetails: {
-            username: "test@test.com",
-            avatarPath: "https://placehold.co/45x45",
-            rating: 80,
+          data: {
+            reviewId: reviewId,
+            userId: userId,
           },
         }
       );
-      setReviews((reviews) => [...reviews, res.data.review]);
+      setReviews((prev) =>
+        prev.filter(
+          (review) =>
+            review.id !== reviewId || review.authorDetails.userId !== userId
+        )
+      );
     } catch (err) {
       console.error(err);
     }
@@ -55,10 +62,20 @@ function ReviewsPage({ titleType }) {
       <FullCreditsHeader title={title} onBack={handleBack} />
       <div className="reviews-container">
         <div className="write-review">
-          <button onClick={handleAddReview}>✏️ Write a review</button>
+          <button onClick={() => setIsModalOpen(true)}>
+            ✏️ Write a review
+          </button>
         </div>
-        <ReviewsList reviews={reviews} />
+        <ReviewsList reviews={reviews} onRemoveReview={handleRemoveReview} />
       </div>
+      {isModalOpen && (
+        <AddReviewModal
+          id={id}
+          titleType={titleType}
+          onAddReview={handleAddReview}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 }

@@ -1,11 +1,15 @@
 import ReviewItem from "./ReviewItem";
 
-function ReviewsList({ reviews }) {
+function ReviewsList({ reviews, onRemoveReview }) {
   return (
     <div className="reviews-list">
       <h2>Reviews</h2>
       {reviews?.map((review) => (
-        <ReviewItem key={review.id} review={review} />
+        <ReviewItem
+          key={review.id}
+          review={review}
+          onRemoveReview={onRemoveReview}
+        />
       ))}
     </div>
   );

@@ -56,7 +56,7 @@ export function removeFromWatchlist(req, res, next) {
   const filteredWatchlist = DUMMY_USERS.watchlist?.filter(
     (w) => w.titleId !== id
   );
-  return next();
+  return res.json({ message: "Removed from watchlist successfully!" });
 }
 
 export function getUserReviews(req, res, next) {

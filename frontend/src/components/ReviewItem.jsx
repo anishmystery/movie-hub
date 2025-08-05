@@ -1,4 +1,4 @@
-function ReviewItem({ review }) {
+function ReviewItem({ review, onRemoveReview }) {
   return (
     <div className="review-item">
       <div className="review-header">
@@ -12,6 +12,12 @@ function ReviewItem({ review }) {
               <em>{review.createdAt}</em>
             </p>
           </div>
+        </div>
+        <div
+          className="remove"
+          onClick={() => onRemoveReview(review.id, review.authorDetails.userId)}
+        >
+          <strong>❌</strong>
         </div>
       </div>
       <div className="review-body">
